@@ -9,9 +9,7 @@ Page({
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
     ],
     dates: [
-      "今天",
-      "明天",
-      "2016.02.05"
+      
     ],
     times: [
       "12:00-14:00",
@@ -93,6 +91,7 @@ Page({
   },
   bindChange: function (e) {
     var val = e.detail.value
+    console.log(this.data.dates[0])
     this.setData({
       date: this.data.dates[val[0]],
       time: this.data.times[val[1]]
@@ -202,15 +201,15 @@ Page({
     var m=util.formatTime2(1);
     var h=util.formatTime2(2);
     this.setData({
-      dates:{
+      dates:[
         j,
         m,
         h
-      } 
+      ]
      
       
     })
-    console.log(this.data.dates)
+    // console.log(this.data.dates)
   },
   expressTap: function (e) {
     var that=this;
