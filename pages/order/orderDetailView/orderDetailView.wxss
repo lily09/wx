@@ -1,0 +1,8 @@
+/* pages/orderDetail/orderDetail.wxss */
+.view-log{
+    border:2rpx solid #e5e5e5;
+    padding:36rpx 0;
+}
+.text-dt{
+    text-decoration:line-through;
+}

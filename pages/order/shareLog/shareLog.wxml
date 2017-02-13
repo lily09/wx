@@ -1,0 +1,61 @@
+<!--pages/order/shareLog/shareLog.wxml-->
+<view class="sub-con">
+  <view class="wx-flex just-center log-banner">
+    BANNER
+  </view>
+  <view class="o-con mt16">
+    <view class="wx-flex just-center sended-time bod-b">
+        <text>预计明日(2016.12.23)可送达</text>
+    </view>
+    <view class="wx-flex just-start o-teaser">
+
+        <!-- S 物流信息 -->
+        <view class="l-log-info">
+            
+            <view class="l-log-box">
+                <view class="l-logList j-list">
+                    <!-- li -->
+                    <view class="wx-flex l-li">
+                        <view class="wx-flex clearfix">
+                            <text class="align-start log-icon "></text>
+                            <view class="l-logList-con wx-flex-c">
+                                <text class="log-info-txt log-F-txt">订单已被拒收，拒收原因：收件人拒收退回</text>
+                                <text class="log-info-txt mt20">2016.12.23 17:56:57</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- li -->
+                    <!-- li -->
+                    <view class="wx-flex l-li">
+                        <view class="wx-flex clearfix">
+                            <text class="align-start log-icon "></text>
+                            <view class="l-logList-con wx-flex-c">
+                                <text class="f28 c-gray">2016-10-20 17:56:57</text>
+                                <text class="f28 c-gray mt20">订单已被拒收，拒收原因：收件人拒收退回</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- li -->
+                    <!-- li -->
+                    <view class="wx-flex l-li">
+                        <view class="wx-flex clearfix">
+                            <text class="align-start log-icon "></text>
+                            <view class="l-logList-con wx-flex-c">
+                                <text class="f28 c-gray">2016-10-20 17:56:57</text>
+                                <text class="f28 c-gray mt20">订单已被拒收，拒收原因：收件人拒收退回</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- li -->
+                </view>
+            </view>
+        </view>
+        <!-- E 物流信息 -->
+    </view>
+  </view>
+
+  <view class="btn-area bod-box pos-bot">
+    <button type="primary" hover-class="other-button-hover" bindtap="confirmAmount"> 马上关注 </button>
+    <text class="c-g888 f26">点击  马上关注  吊起棒棒达小程序关注入口</text>
+  </view>
+</view>

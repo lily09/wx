@@ -1,0 +1,136 @@
+
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class="">
+
+  <!-- S 选择 -->
+  <view class="mt16 o-con">
+
+    <!-- 1 -->
+    <view class="wx-flex order-teaser align-str bod-b">
+      <text class="c-gray f30 wx-flex">订单状态</text>
+      <view class="f48 c-black35"><text hidden="{{ ordersH }}">{{ orderinfo.status }}</text> <text hidden="{{ cancelH }}">{{ status }}</text></view>
+    </view>
+
+    <!-- 2 -->
+    <view class="wx-flex-c order-teaser align-str bod-b">
+      <view class="wx-flex">
+        <text class="c-gray f28">期望上门时间</text>
+        <text class="c-gray f28">{{ orderinfo.expect_tim }}</text>
+      </view>
+      <view class="wx-flex pt35">
+        <text class="c-gray f28">快递公司</text>
+        <view class="c-gray f28">
+          {{ orderinfo.express }}
+          <text class="c-green"> 51914</text>
+        </view>
+      </view>
+      <!-- S 待取件 -->
+      <view class="wx-flex pt35" hidden="{{ getH }}">
+        <text class="c-gray f28">取件配送员</text>
+        <view class="c-gray f28">
+          宋青书
+          <text class="c-green"> 18519200514</text>
+        </view>
+      </view>
+      <!-- E 待取件 -->
+    </view>
+
+    <!-- 3 -->
+
+    <!-- S 寄 -->
+    <view class="o-con bod-tb0">
+      <view class="wx-flex o-teaser align-str bod-b">
+        <view class="wx-flex">
+          <image src="../../images/w_send.png" class="send-icon" />
+          <view class="wx-flex-c">
+            <text class="f28 c-g999">{{ orderinfo.sender.sender_name }}　　　{{ orderinfo.sender.sender_phone }}</text>
+            <text class="f30 ">{{ orderinfo.sender_address }}</text>
+          </view>
+        </view>
+      </view>
+      <view class="wx-flex o-teaser bod-b align-str">
+        <view class="wx-flex">
+          <image src="../../images/w_re.png" class="send-icon" />
+          <view class="wx-flex-c">
+              <text class="f28 c-g999">{{ orderinfo.receiver.receiver_name}}　　　{{ orderinfo.receiver.receiver_phone }}</text>
+              <text class="f30 ">{{ orderinfo.receiver.receiver_address }}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+    <!-- E 寄 -->
+    <!-- 4 -->
+    <view class="wx-flex-c order-teaser align-str">
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">订单编号</text>
+            <text class="c-gray f28">{{ orderinfo.mailnum }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">下单时间</text>
+            <text class="c-gray f28">{{ orderinfo.datetim }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">物品类型</text>
+            <text class="c-gray f28">{{ orderinfo.goodstyp }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">物品重量</text>
+            <text class="c-gray f28">{{ orderinfo.weight }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">预估订单金额</text>
+            <text class="c-gray f28">{{ orderinfo.estimatefee }}</text>
+        </view>
+    </view>
+    <!-- S 已取消 -->
+    <view class="wx-flex-c order-teaser pt0 align-str bod-t" hidden="{{ cancelH }}">
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">取消原因</text>
+            <text class="c-gray f28">{{ cancelR }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">取消时间</text>
+            <text class="c-gray f28">2016.12.23 11:00</text>
+        </view>
+    </view>
+    <!-- E 已取消-->
+  </view>
+
+  <!-- E 选择 -->
+
+    
+
+  <!-- S 待接单 -->
+  <view class="mt60 btn-area" hidden="{{ osH }}">
+      <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" hover-class="other-button-hover" bindtap="cancelOrder">  
+          取消订单
+          </button>
+      
+  </view>
+  <!-- S 取消原因picker-view-->
+  <view wx:if="{{isCancel}}" class="modal">
+    <view class="bod-box wx-flex modal-header">
+      <text class="c-gray" bindtap="close">取消</text>
+      <text class="c-green" bindtap="confirmC">确定</text>
+    </view>
+    <picker-view indicator-style="height: 50px;" value="{{value}}" bindchange="bindChange" class="modal-body">
+      
+      <picker-view-column>
+        <view wx:for="{{ cancelList }}" style="line-height: 50px">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+    
+  <!-- E 取消原因picker-view-->
+  <!-- E 待接单-->
+  <!-- S 待取件 -->
+  <view class="mt60 btn-area" hidden="{{ getH }}">
+      <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="payPage" hover-class="other-button-hover"> 支付订单 </button>
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="cancelOrder" hover-class="other-button-hover" class="mt30"> 取消订单 </button>
+  </view>
+  <!-- E 待取件-->
+</view>

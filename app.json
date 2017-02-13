@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/orderList/orderList",
+    "pages/order/orderDetail/orderDetail",
+    "pages/order/orderDetailView/orderDetailView",
+    "pages/order/logInfo/logInfo",
+    "pages/address/deliver/addDeliverAddress/addDeliverAddress",
+    "pages/order/shareLog/shareLog",
+    "pages/order/orderAmount/orderAmount",
+    "pages/address/deliver/deliverAddress/deliverAddress",
+    "pages/address/deliver/editDeliverAddress/editDeliverAddress",
+    "pages/express/express",
+    "pages/address/receiver/addReceiverAddress/addReceiverAddress",
+    "pages/address/receiver/editReceiverAddress/editReceiverAddress",
+    "pages/address/receiver/receiverAddress/receiverAddress"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3b3c40",
+    "navigationBarTitleText": "棒棒达寄件平台",
+    "navigationBarTextStyle":"#fff"
+  }
+}

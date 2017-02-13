@@ -1,0 +1,22 @@
+<!--pages/orderAmount/orderAmount.wxml-->
+<import src="../../common/header.wxml" />
+<view class="sub-con">
+  <text class="wx-flex a-tip">为保护您的财产安全，请在配送员确认实际订单金额后支付</text>
+  <view class="o-con">
+    <view class="wx-flex just-start o-teaser bod-b">
+      <text class="wx-flex-hdL f34">实际订单金额</text>
+      <view class="wx-flex-bd f34">
+        <input type="number" class="input-txt" placeholder="请输入订单金额" placeholder-class="c-gray" value="{{ amount }}" bindinput="amountInput" />
+      </view>
+    </view>
+  </view>
+
+  <view class="btn-area bod-box pos-bot">
+    <button type="primary" hover-class="other-button-hover" bindtap="confirmAmount"> 确定订单金额 </button>
+  </view>
+  <!-- S 提示 -->
+    <view class="o-tip0 bod-box" hidden="{{ toast }}">
+        <text>{{ toastTxt }}</text>
+    </view>
+    <!-- E 提示 -->
+</view>

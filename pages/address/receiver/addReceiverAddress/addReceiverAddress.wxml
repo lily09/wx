@@ -1,0 +1,65 @@
+<!--pages/addDeliverAddress/addDeliverAddress.wxml-->
+<view class="sub-con">
+  <view class="o-con mt16">
+
+    <view class="wx-flex just-start o-teaser bod-b">
+      <text class="wx-flex-hd f34">收货人</text>
+      <view class="wx-flex-bd f34">
+        <input type="text" class="input-txt" placeholder="收货人姓名" placeholder-class="c-gray" value="{{ userName }}" bindinput="userNameInput" />
+      </view>
+    </view>
+
+    <view class="wx-flex just-start o-teaser bod-b">
+      <text class="wx-flex-hd f34">联系电话</text>
+      <view class="wx-flex-bd f34">
+        <input type="number" class="input-txt" placeholder="请填写11位手机号码"  placeholder-class="c-gray" value="{{ phone }}" bindinput="phoneInput" />
+      </view>
+    </view>
+
+    <view class="wx-flex just-start o-teaser bod-b">
+      <text class="wx-flex-hd f34">选择地区</text>
+      <view class="wx-flex-bd f34">
+        <input type="text" class="input-txt" placeholder="地区信息"  placeholder-class="c-gray" value="{{province}}-{{city}}-{{county}}" focus="{{focus}}" bindfocus="open" />
+      </view>
+      <text class="o-arrow-r"></text>
+    </view>
+    <!-- S 选择省市区 -->
+    <view wx:if="{{condition}}" class="citypicker">
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+          <view bindtap="open" class="city-cancel">取消</view>
+          <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <!-- E 选择省市区 -->
+
+    <view class="wx-flex just-start o-teaser bod-b">
+      <text class="wx-flex-hd f34 align-start">详细地址</text>
+      <view class="wx-flex-bd f34">
+        <textarea type="text" class="input-txt txtA" placeholder="街道门牌信息"  placeholder-class="c-gray" value="{{ address }}" bindinput="addressInput" />
+      </view>
+    </view>
+
+  </view>
+
+  <view class="mt60 btn-area">
+      <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"  bindtap="saveAddress"> 保存 </button>
+  </view>
+  
+  <!-- S 提示 -->
+  <view class="o-tip bod-box" hidden="{{ toast }}" style="top:0;">
+    <text>{{ toastTxt }}</text>
+  </view>
+  <!-- E 提示 -->
+</view>

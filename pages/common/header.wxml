@@ -1,0 +1,7 @@
+<!-- header.wxml -->
+<template name="header">
+    <view class="wx-flex header bod-box" style="height:{{ headHei }}rpx">
+        <navigator url="../../index/index" open-type="redirect" hover-class="nav-item-cur" class="wx-flex nav-item {{ wSend }}">我要寄件</navigator>
+        <navigator url="../order/orderList/orderList" open-type="redirect" hover-class="nav-item-cur" class="wx-flex nav-item {{ wOrder }}">我的订单</navigator>
+    </view>
+</template>

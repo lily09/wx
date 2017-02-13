@@ -1,0 +1,46 @@
+/* pages/order/order.wxss */
+.order-empty{
+    width:229rpx;
+    height:329rpx;
+}
+.empty-box{
+    width:100%;
+    position:absolute;
+    top:294rpx;
+}
+.empty-text{
+    font-size:30rpx;
+    color:#353535;
+    padding-top:50rpx;
+}
+.phone-box{
+    position:absolute;
+    bottom:30rpx;
+    width:100%;
+    color:#576b95;
+    font-size:26rpx;
+    text-align:center;
+}
+.order-list{
+    margin-top:16rpx;
+    background:#fff;
+    border:2rpx solid #e5e5e5;
+    border-left:none;
+    border-right:none;
+    padding:30rpx;
+}
+.order-c1{
+    font-size:26rpx;
+    color:#999999;
+}
+.order-status{
+    font-size:34rpx;
+    color:#353535;
+}
+.user-info{
+    font-size:32rpx;
+    color:#353535;
+}
+.order-list-pad{
+    padding:32rpx 0 25rpx;
+}

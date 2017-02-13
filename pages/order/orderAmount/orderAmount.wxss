@@ -1,0 +1,5 @@
+/* pages/orderAmount/orderAmount.wxss */
+.a-tip{
+    font-size:26rpx;
+    padding:36rpx 30rpx 28rpx;
+}

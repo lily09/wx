@@ -1,0 +1,35 @@
+<!--pages/address/deliverAddress/deliverAddress.wxml-->
+<view class="sub-con">
+  <view class="o-con mt16">
+
+    <!-- S 发货地址 -->
+    <radio-group class="radio-group wx-flex-c" bindchange="radioChange">
+    <block wx:for="{{ addressList }}">
+      <view class="wx-flex o-teaser bod-b align-str">
+        <label class="radio wx-flex" bindtap="chooseAddress" data-addressid="{{ item.addressid }}">
+        <!--{{ index==0?true:false }}-->
+          <radio class="radio-pad" value="" checked="" />
+          <view class="wx-flex-c">
+            <text class="f28 c-g999">{{ item.name }}　　　{{ item.phone }}</text>
+            <view class="f30 pt10">
+              {{ item.prov }}
+              {{ item.city }}
+              {{ item.area }}
+              {{ item.address }}
+            </view>
+          </view>
+        </label>
+        <view class="wx-flex w200 just-end" bindtap="editDaddress" data-addressid="{{ item.addressid }}">
+          <text class="o-arrow-r"></text>
+        </view>
+      </view> 
+      
+    </block>
+    </radio-group>
+    
+    <!-- E 发货地址 -->
+  </view>
+  <view class="mt60 btn-area">
+    <button type="primary" bindtap="addAddress" hover-class="other-button-hover" class="mb30"> 新增发货地址 </button>
+  </view>
+</view>

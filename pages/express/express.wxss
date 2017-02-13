@@ -1,0 +1,38 @@
+/* pages/express/express.wxss */
+.w-new{
+    position:absolute;
+    width:80rpx;
+    height:80rpx;
+    left:-30rpx;
+    top:0;
+}
+.e-icon{
+    width:120rpx;
+    height:120rpx;
+    border:2rpx solid #ccc;
+    border-radius:10rpx;
+    margin-right:20rpx;
+}
+.o-cho-icon{
+    width:26rpx;
+    height:18rpx;
+}
+.e-name{
+    font-size:34rpx;
+    font-weight:bold;
+}
+.e-sale-zhe{
+    font-size:20rpx;
+    width:30rpx;
+    height:30rpx;
+    line-height:30rpx;
+    border-radius:50%;
+    background:#ffbe00;
+    color:#fff;
+    text-align:center;
+    margin:0 10rpx 0 30rpx;
+}
+.e-sale-s{
+    color:#ffbe00;
+    font-size:26rpx;
+}

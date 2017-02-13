@@ -1,0 +1,4 @@
+/* pages/address/deliverAddress/deliverAddress.wxss */
+.w200{
+    width:200rpx;
+}

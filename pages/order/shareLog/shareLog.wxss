@@ -1,0 +1,7 @@
+/* pages/order/shareLog/shareLog.wxss */
+.log-banner{
+    height:150rpx;
+    background:#d9d9d9;
+    color:#353535;
+    font-size:34rpx;
+}

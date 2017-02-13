@@ -1,0 +1,37 @@
+<!--pages/order/order.wxml-->
+<import src="../../common/header.wxml" />
+<template is="header" data="{{wOrder:'nav-item-cur'}}" />
+<!-- S 空 -->
+<!--<view class="empty-box">
+  <view class="wx-flex-c align-c">
+    <image src="../images/order_empty.png" class="order-empty"></image>
+    <text class="empty-text">暂无订单</text>
+  </view>
+</view>-->
+<!-- E 空 -->
+
+<!-- S 有 -->
+<view class="container">
+  <block wx:for="{{ orderList }}" wx:for-item="order">
+  <!-- S -->
+  <view class="wx-flex-c order-list" bindtap="viewOrderD" data-orderid="{{ order.orderid }}">
+    <view class="wx-flex">
+      <text class="order-c1">订单编号：{{ order.mailnum }}</text>
+      <text class="order-status">{{ order.status }}</text>
+    </view>
+    <view class="wx-flex order-list-pad">
+      <text class="user-info">收件人：{{ order.receive_name }}  　　{{ order.receive_phone }}</text>
+      <text class="o-arrow-r"></text>
+    </view>
+    <view>
+      <text class="order-c1">地址：{{ order.receive_address }}</text>
+    </view>
+  </view>
+   <!-- E -->
+   </block>
+   
+</view>
+<!-- E 有 -->
+<view class="phone-box">
+    <text bindtap="phoneCall">客服电话：400 1282 1828</text>
+</view>

@@ -1,0 +1,4 @@
+/* pages/order/logoInfo/logoInfo.wxss */
+.log-box{
+    margin:40rpx 0;
+}

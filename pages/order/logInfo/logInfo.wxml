@@ -1,0 +1,37 @@
+<!--pages/order/logoInfo/logoInfo.wxml-->
+<view class="sub-con">
+  <view class="o-con log-box">
+    <view class="wx-flex just-center sended-time bod-b">
+        <text>预计明日(2016.12.23)可送达</text>
+    </view>
+    <view class="wx-flex just-start o-teaser">
+
+        <!-- S 物流信息 -->
+        <view class="l-log-info">
+            
+            <view class="l-log-box">
+                <view class="l-logList j-list">
+                    <block wx:for="{{ expressList }}" wx:for-item="express">
+                    <!-- li -->
+                    <view class="wx-flex l-li">
+                        <view class="wx-flex clearfix">
+                            <text class="align-start log-icon "></text>
+                            <view class="l-logList-con wx-flex-c">
+                                <text class="log-info-txt log-F-txt">{{ express.express_remark }}</text>
+                                <text class="log-info-txt mt20">{{ express.express_tim }}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- li -->
+                    </block>
+                </view>
+            </view>
+        </view>
+        <!-- E 物流信息 -->
+    </view>
+  </view>
+
+  <view class="btn-area bod-box pos-bot">
+    <button type="primary" hover-class="other-button-hover" bindtap="shareLog"> 分享物流详情 </button>
+  </view>
+</view>

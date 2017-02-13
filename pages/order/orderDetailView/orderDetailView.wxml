@@ -1,0 +1,98 @@
+
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class="">
+
+  <!-- S 选择 -->
+  <view class="mt16 o-con">
+
+    <!-- 1 -->
+    <view class="wx-flex order-teaser align-str bod-b">
+      <text class="c-gray f30 wx-flex">订单状态</text>
+      <view class="f48 c-black35"><text hidden="{{ ordersH }}">{{ orderinfo.status }}</text> <text hidden="{{ cancelH }}">{{ status }}</text></view>
+    </view>
+
+    <!-- 2 -->
+    <view class="wx-flex-c order-teaser align-str">
+      <view class="wx-flex">
+        <text class="c-gray f28">期望上门时间</text>
+        <text class="c-gray f28">{{ orderinfo.expect_tim }}</text>
+      </view>
+      <view class="wx-flex pt35">
+        <text class="c-gray f28">快递公司</text>
+        <view class="c-gray f28">
+          {{ orderinfo.express }}
+          <text class="c-green"> 51914</text>
+        </view>
+      </view>
+      <!-- S 配送中 -->
+      <view class="wx-flex pt35">
+        <text class="c-gray f28">物流详情</text>
+        <view class="c-gray f28">
+          <text>{{ orderinfo.expressremark }}</text>
+        </view>
+      </view>
+      <!-- E 配送中 -->
+    </view>
+
+    <!-- S 查看物流信息 -->
+    <view class="wx-flex just-center  view-log">
+        <text class="c-green f30" bindtap="viewLog">查看物流信息</text>
+    </view>
+    <!-- E 查看物流信息 -->
+
+    <!-- 3 -->
+
+    <!-- S 寄 -->
+    <view class="o-con bod-tb0">
+      <view class="wx-flex o-teaser align-str bod-b">
+        <view class="wx-flex">
+          <image src="../../images/w_send.png" class="send-icon" />
+          <view class="wx-flex-c">
+            <text class="f28 c-g999">{{ orderinfo.sender.sender_name }}　　　{{ orderinfo.sender.sender_phone }}</text>
+            <text class="f30 ">{{ orderinfo.sender_address }}</text>
+          </view>
+        </view>
+      </view>
+      <view class="wx-flex o-teaser bod-b align-str">
+        <view class="wx-flex">
+          <image src="../../images/w_re.png" class="send-icon" />
+          <view class="wx-flex-c">
+              <text class="f28 c-g999">{{ orderinfo.receiver.receiver_name}}　　　{{ orderinfo.receiver.receiver_phone }}</text>
+              <text class="f30 ">{{ orderinfo.receiver.receiver_address }}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+    <!-- E 寄 -->
+    <!-- 4 -->
+    <view class="wx-flex-c order-teaser align-str">
+         <view class="wx-flex pt35">
+            <text class="c-gray f28">订单编号</text>
+            <text class="c-gray f28">{{ orderinfo.mailnum }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">下单时间</text>
+            <text class="c-gray f28">{{ orderinfo.datetim }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">物品类型</text>
+            <text class="c-gray f28">{{ orderinfo.goodstyp }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">物品重量</text>
+            <text class="c-gray f28">{{ orderinfo.weight }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">预估订单金额</text>
+            <text class="c-gray f28 text-dt">{{ orderinfo.estimatefee }}</text>
+        </view>
+        <view class="wx-flex pt35">
+            <text class="c-gray f28">实际订单金额</text>
+            <text class="c-gray f28">{{ orderinfo.fee }}</text>
+        </view>
+    </view>
+  </view>
+
+  <!-- E 选择 -->
+</view>

@@ -1,0 +1,41 @@
+<!--pages/express/express.wxml-->
+<view class="sub-con">
+    <!-- S 快递公司 -->
+    <view class="o-con mt16">
+        <input type="text" hidden value="{{ addressid1 }}" />
+        <input type="text" hidden value="{{ addressid2 }}" />
+        <input type="text" hidden value="{{ expressName1 }}" />
+        <!-- S sf -->
+        <view class="wx-flex o-teaser pos-re" bindtap="chooseExpress" data-name="顺丰速运">
+            <image class="w-new" src="../images/w_new.png"></image>
+            <view class="wx-flex">
+                <image class="e-icon align-start" src="../images/w_sf.png" ></image>
+                
+                <view class="wx-flex-c">
+                    <view class="wx-flex just-start">
+                        <text class="e-name">顺丰速运</text>
+                        <view class="wx-flex">
+                            <text class="e-sale-zhe">折</text>
+                            <text class="e-sale-s">下单立享8折优惠</text>
+                        </view>
+                    </view>
+                    <view class="f26 c-black mt30">
+                        12元起  |  首重3公斤  |  续重2元/公斤 
+                    </view>
+                    <view class="f26 c-g999 mt30">
+                        可上门取件时间:  9:00-20:00
+                    </view>
+                    <view class="f26 mt30">
+                        <text class="c-g999">客服电话：</text>
+                        <text class="c-green">4008 111 111</text>
+                    </view>
+                </view>
+            </view>
+            <image src="../images/w_radio.png" class="o-cho-icon"></image>
+        </view>
+        <!-- E sf -->
+    </view>
+    <!-- E 快递公司 -->
+
+    <text class="wx-flex just-center f30 c-g999 mt60">更多快递资源正在接入中…</text>
+</view>
